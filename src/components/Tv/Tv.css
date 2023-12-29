@@ -1,0 +1,133 @@
+.dpad-1{
+    width: 33%;
+    height: 33%;
+}
+.dpad-2{
+    width: 90%;
+    height: 33%;
+}
+
+.dpad-divider{
+    width: 128%;
+    /*height: 33%;*/
+}
+.dpad-up-icon{
+    margin-bottom: 0.4em;
+}
+.dpad-left-icon{
+    margin-right: 1.0em;
+}
+.dpad-right-icon{
+    margin-left: 1.0em;
+}
+.dpad-down-icon{
+    margin-top: 0.4em;
+}
+.dpad-left {
+    /*margin-right: 44px;*/
+    /*margin-left: 4px;*/
+
+}
+.dpad-right {
+    /*margin-right: 4px;*/
+    /*margin-left: 44px;*/
+
+}
+.custom-row-3{
+    height: 88px !important;
+}
+
+.custom-row-3 .card{
+    width: 100%;
+    height: 100% !important;
+}
+
+.custom-row-3 .btn{
+    /*margin-left:1.2em;*/
+    /*margin-right:3.8em;*/
+    margin: 0.4em;
+    width: 22%;
+    height: 100% !important;
+}
+
+.custom-row-3 .btn-divider {
+width:18%;
+}
+
+.custom-row-2 {
+    height: 268px !important;
+}
+.custom-row-2 .card{
+     width: 100%;
+     height: 100% !important;
+ }
+.custom-row-2 .btn-group {
+    padding: 0.1em;
+    /*margin: 3px;*/
+}
+.btn-icon {
+    /*background: #0d6efd;*/
+    width: 100%;
+    /*width: calc(50% - 4px); !* Adjust the spacing as needed *!*/
+    height: 100%;
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    outline: none; /* Remove outline on focus (for accessibility) */
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%,-50%);*/
+    /*width: 200px;*/
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: sans-serif;
+    /*box-sizing: border-box;*/
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    /*background: linear-gradient(90deg,#5bcedf, #f96161, #fc8f46, #36e494);*/
+    background-size: 400%;
+    border-radius: 30px;
+    /*z-index: 1;*/
+}
+
+.custom-icon {
+    font-size: 36px;
+    color: #fff;
+}
+
+.btn-icon:hover{
+    animation: animate 8s linear infinite;
+}
+.btn-icon:before{
+    content: '';
+    /*position: absolute;*/
+    /*top: -5px;*/
+    /*left: -5px;*/
+    /*right: -5px;*/
+    /*bottom: -5px;*/
+    /*z-index: -1;*/
+    /*background: linear-gradient(90deg,#5bcedf, #f96161, #fc8f46, #36e494);*/
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400px;
+    border-radius: 40px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.btn-icon:hover:before{
+    filter: blur(10px);
+    opacity: 1;
+}
+
+
+@keyframes animate {
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
