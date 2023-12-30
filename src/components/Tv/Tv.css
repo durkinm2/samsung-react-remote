@@ -1,3 +1,9 @@
+.container {
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*text-align: center !important;*/
+}
+
 .btn-power-main {
     background: red;
     color: whitesmoke;

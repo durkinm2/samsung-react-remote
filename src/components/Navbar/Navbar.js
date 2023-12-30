@@ -24,7 +24,7 @@ const NavBar = () => {
                 <Nav className="custom-nav" style={{display:"flex", flexDirection:"row", justifyContent: 'space-between', alignItems: 'center', width: '100%'}} activeKey="1" onSelect={handleSelect}>
                     <Nav.Item>
                         <Nav.Link as={Link} to="/" className={`text-light custom-nav-link  ${location.pathname === '/' ? 'active' : ''}`}>
-                            <FiHome size={26} className="custom-nav-icon"/>
+                            <FiHome size={28} className="custom-nav-icon"/>
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
@@ -44,7 +44,7 @@ const NavBar = () => {
                     </Nav.Item>
                     <Nav.Item>
                         <Nav.Link as={Link} to="/settings" className={`text-light custom-nav-link ${location.pathname === '/settings' ? 'active' : ''}`}>
-                            <FiSettings size={26} className="custom-nav-icon" />
+                            <FiSettings size={28} className="custom-nav-icon" />
                         </Nav.Link>
                     </Nav.Item>
 

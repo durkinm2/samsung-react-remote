@@ -3,7 +3,6 @@
 }
 
 .control-col {
-    /*flex: 1;*/
 }
 
 .row-first {
@@ -16,6 +15,10 @@
 
 .settings-text-white {
     color: #fff;
+}
+
+.btn-save {
+    background: #007bff !important;
 }
 
 @media (max-width: 767px) {

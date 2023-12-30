@@ -22,7 +22,8 @@ const TV = () => {
 
     return (
         <div className="container mt-5">
-            <div>
+            <div className="tv-container d-grid gap-1">
+
                 <div className="col-md-4 custom-row-1">
                     <div className="card">
                         <div className="card-body">
@@ -75,19 +76,6 @@ const TV = () => {
                             <button className="btn btn-outline-light float-end">
                                 <AiFillHome size={28} className=" "/>
                             </button>
-                            {/*<div className="btn-group">*/}
-                            {/*    <button className="btn btn-outline-light">*/}
-                            {/*        <BsFillVolumeMuteFill size={28} className=" "/>*/}
-                            {/*    </button>*/}
-                            {/*    <button className="btn btn-outline-light">*/}
-                            {/*        <AiFillHome size={28} className=" "/>*/}
-                            {/*    </button>*/}
-                            {/*</div>*/}
-                            {/*<div className="btn-group">*/}
-                            {/*    <button className="btn btn-outline-light">*/}
-                            {/*        <AiFillHome size={28} className=" "/>*/}
-                            {/*    </button>*/}
-                            {/*</div>*/}
                         </div>
                     </div>
                 </div>

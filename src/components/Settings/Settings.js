@@ -75,6 +75,16 @@ const Settings = () => {
                 </Col>
             </Row>
 
+            <Row>
+                <Col xs={12}>
+                    <Col>
+                        <Button className="btn-save" variant="secondary" size="lg" active>
+                            Save
+                        </Button>
+                    </Col>
+                </Col>
+            </Row>
+
         </div>
     );
 };
