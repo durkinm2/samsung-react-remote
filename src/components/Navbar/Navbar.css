@@ -1,6 +1,5 @@
-.custom-navbar {
-  background-color: #007bff !important;
-  color: #fff;
+.custom-nav {
+  /*padding-bottom: 4px !important;*/
 }
 
 .custom-navbar-brand {
@@ -9,43 +8,12 @@
   color: #fff !important;
 }
 
-/*.navbar-nav {*/
-/*  list-style: none;*/
-/*  padding: 0;*/
-/*}*/
-
-/*.nav-item {*/
-/*  display: inline;*/
-/*  margin: 0 10px;*/
-/*}*/
-/*.custom-nav-dropdown {*/
-/*  font-size: 1.6em !important;*/
-/*  --bs-nav-link-color: #fff !important;*/
-/*  --bs-nav-link-hover-color:#fff !important;*/
-/*  --bs-navbar-active-color: #fff !important;*/
-/*}*/
-.sidebar {
-  background-color: #292b3a;
-  color: white;
-  transition: width 0.3s; /* Add a smooth transition effect */
-}
-
-/* Add styling for the toggle button */
-/*.toggle-btn {*/
-/*  cursor: pointer;*/
-/*  position: absolute;*/
-/*  left: 10px;*/
-/*  top: 10px;*/
-/*  font-size: 20px;*/
-/*  z-index: 999;*/
-/*}*/
-/* Add styles for the active Nav.Link elements */
 .custom-nav-link.active {
-  color: #007bff !important; /* Change this color to your desired active color */
-  font-weight: bold; /* Optionally, you can make the text bold for the active state */
+  color: #007bff !important;
+  font-weight: bold;
   text-decoration: underline #007bff;
-  text-decoration-thickness: 2px; /* Adjust the thickness of the underline */
-  text-underline-offset: 7px; /* Adjust the distance between text and underline */
+  text-decoration-thickness: 2px;
+  text-underline-offset: 7px;
 }
 
 .custom-nav-link {
