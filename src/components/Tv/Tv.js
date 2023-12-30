@@ -12,6 +12,7 @@ import {
 import './Tv.css';
 import {BsFillVolumeMuteFill} from "react-icons/bs";
 import {AiFillHome} from "react-icons/ai";
+import {MdInput} from "react-icons/md";
 
 const TV = () => {
     const { tvId } = useParams();
@@ -21,18 +22,17 @@ const TV = () => {
 
     return (
         <div className="container mt-5">
-            <div className="row">
-                <div className="col-md-4">
+            <div>
+                <div className="col-md-4 custom-row-1">
                     <div className="card">
                         <div className="card-body">
-                            <button className="btn btn-primary btn-block btn-power">
-                                <FiPower className="custom-icon-row1"/>
+                            <button className="btn btn-outline-light float-start">
+                                <FiPower size={28} className=""/>
                             </button>
-                            <div className="btn-group">
-                                <button className="btn btn-secondary">
-                                    <FiCrosshair className="custom-icon-row1" />
-                                </button>
-                            </div>
+                            {/*<div className="btn-divider"/>*/}
+                            <button className="btn btn-outline-light float-end">
+                                <MdInput size={28} className=" "/>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -67,24 +67,24 @@ const TV = () => {
                 <div className="col-md-4 custom-row-3">
                     <div className="card">
                         <div className="card-body">
-                            <button className="btn btn-outline-dark float-start">
+                            <button className="btn btn-outline-light float-start">
                                 <BsFillVolumeMuteFill size={28} className=""/>
                             </button>
                             {/*<div className="btn-divider"/>*/}
 
-                            <button className="btn btn-outline-dark float-end">
+                            <button className="btn btn-outline-light float-end">
                                 <AiFillHome size={28} className=" "/>
                             </button>
                             {/*<div className="btn-group">*/}
-                            {/*    <button className="btn btn-outline-dark">*/}
+                            {/*    <button className="btn btn-outline-light">*/}
                             {/*        <BsFillVolumeMuteFill size={28} className=" "/>*/}
                             {/*    </button>*/}
-                            {/*    <button className="btn btn-outline-dark">*/}
+                            {/*    <button className="btn btn-outline-light">*/}
                             {/*        <AiFillHome size={28} className=" "/>*/}
                             {/*    </button>*/}
                             {/*</div>*/}
                             {/*<div className="btn-group">*/}
-                            {/*    <button className="btn btn-outline-dark">*/}
+                            {/*    <button className="btn btn-outline-light">*/}
                             {/*        <AiFillHome size={28} className=" "/>*/}
                             {/*    </button>*/}
                             {/*</div>*/}
