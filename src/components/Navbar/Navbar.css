@@ -1,7 +1,3 @@
-.custom-nav {
-  /*padding-bottom: 4px !important;*/
-}
-
 .custom-navbar-brand {
   font-weight: bold;
   font-size: 1.0em !important;
@@ -24,3 +20,13 @@
   margin-left: 16px !important;
   margin-right: 16px !important;
 }
+
+@media (max-width: 767px) {
+  .custom-nav {
+    margin-top: 2%;
+  }
+  .custom-nav-icon {
+    margin-bottom: 26%;
+  }
+}
+
