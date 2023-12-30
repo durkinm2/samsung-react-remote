@@ -1,0 +1,24 @@
+.label-col {
+    text-align: end;
+}
+
+.control-col {
+    /*flex: 1;*/
+}
+
+.row-first {
+    margin-bottom: 18px;
+}
+
+.settings {
+    margin-top: 40px;
+}
+
+.settings-text-white {
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    .settings {
+    }
+}

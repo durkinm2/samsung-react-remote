@@ -3,7 +3,7 @@ import Home from './components/Home/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './components/Navbar/Navbar';
 import TV from './components/Tv/Tv';
-import Settings from './components/Settings';
+import Settings from './components/Settings/Settings';
 function MainApp() {
 
     return (
