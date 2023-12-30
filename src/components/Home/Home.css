@@ -1,26 +1,30 @@
 .container {
-    width: 82%;
-    max-width: 400px;
+    /*max-width: 400px;*/
     margin: 0 auto;
     text-align: center;
 }
 
 .home-container{
-    margin-top: 120px !important;
+    width: 96% !important;
+    margin-top: 90px !important;
     margin-bottom: 100px;
     flex: 1; /* Let the container fill the remaining vertical space */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-
+.card-header {
+    color: #fff !important;
+    text-align: start;
+    background: #49706c !important;
+}
 .home-container .btn-row {
-    margin-bottom: 30px;
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .home-container .btn-row .btn-power-main {
     background: red;
     color: whitesmoke;
@@ -31,7 +35,7 @@
 
 .home-container .btn-row .btn-tv-main {
     color:whitesmoke;
-    height: 60%;
+    /*height: 60%;*/
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
 }

@@ -24,29 +24,31 @@ function Home() {
 
     return  (
         <div className="container home-container">
-            {/*<div className="btn-row" role="group" aria-label="Basic example">*/}
-            {/*    <button className="button btn-tv-main">TV 1</button>*/}
-            {/*    <button className="button btn-power-main">*/}
-            {/*        <FiPower className="custom-icon-row1"/>*/}
-            {/*    </button>*/}
-            {/*</div>*/}
-            <div className="btn-group btn-row">
-                <button className="btn btn-tv-main">TV 1</button>
-                <button className="btn btn-power-main">
-                    <FiPower className="custom-icon-row1"/>
-                </button>
-            </div>
-            <div className="btn-group btn-row">
-                <button className="btn btn-tv-main">TV 2</button>
-                <button className="btn btn-power-main">
-                    <FiPower className="custom-icon-row1"/>
-                </button>
-            </div>
-            <div className="btn-group btn-row">
-                <button className="btn btn-tv-main">TV 3</button>
-                <button className="btn btn-power-main">
-                    <FiPower className="custom-icon-row1"/>
-                </button>
+            <div className="card">
+                <div className="card-header">
+                    <h5>Screens</h5>
+                </div>
+                <div className="card-body d-grid gap-4">
+                    <div className="btn-group btn-row">
+                        <button className="btn btn-tv-main">TV 1</button>
+                        <button className="btn btn-power-main">
+                            <FiPower className="custom-icon-row1"/>
+                        </button>
+                    </div>
+                    <div className="btn-group btn-row">
+                        <button className="btn btn-tv-main">TV 2</button>
+                        <button className="btn btn-power-main">
+                            <FiPower className="custom-icon-row1"/>
+                        </button>
+                    </div>
+                    <div className="btn-group btn-row">
+                        <button className="btn btn-tv-main">TV 3</button>
+                        <button className="btn btn-power-main">
+                            <FiPower className="custom-icon-row1"/>
+                        </button>
+                    </div>
+                </div>
+
             </div>
         </div>
     );
