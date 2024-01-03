@@ -1,4 +1,4 @@
-const {KEYS, APPS, Samsung} = require("samsung-tv-control");
+// const {KEYS, APPS, Samsung} = require("samsung-tv-control");
 const wol = require('wol');
 const WebSocket = require('ws');
 class SamsungApi {

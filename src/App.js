@@ -6,7 +6,7 @@ import MainApp from './MainApp';
 function App() {
   return (
       <div className="App">
-        <BrowserRouter>
+          <BrowserRouter>
           <MainApp />
         </BrowserRouter>
       </div>

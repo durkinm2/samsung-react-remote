@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {Link, useLocation} from 'react-router-dom';
-import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import './Navbar.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';

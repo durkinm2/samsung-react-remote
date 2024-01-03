@@ -13,11 +13,25 @@ import './Tv.css';
 import {BsFillVolumeMuteFill} from "react-icons/bs";
 import {AiFillHome} from "react-icons/ai";
 import {MdInput} from "react-icons/md";
+import { useSamsungAPI } from '../../contexts/SamsungAPIContext';
+// import {KEYS} from "samsung-tv-control";
 
 const TV = () => {
     const { tvId } = useParams();
-    const sendCommand = (command) => {
-        console.log(`Sending command "${command}" to TV${tvId}`);
+
+    const { getApiInstance } = useSamsungAPI();
+    const samsungApi = getApiInstance(tvId);
+
+    const sendCommand = (k) => {
+        // Send key to TV
+        // samsungApi.sendKey(KEYS[k], function (err, res) {
+        //     if (err) {
+        //         throw new Error(err);
+        //     } else {
+        //         console.log(res);
+        //     }
+        // });
+        console.log(`Sending command "${k}" to TV${tvId}`);
     };
 
     return (
@@ -27,7 +41,7 @@ const TV = () => {
                 <div className="col-md-4 custom-row-1">
                     <div className="card">
                         <div className="card-body">
-                            <button className="btn btn-outline-light float-start">
+                            <button className="btn btn-outline-light float-start" onClick={() => sendCommand('KEY_POWER')}>
                                 <FiPower size={28} className=""/>
                             </button>
                             {/*<div className="btn-divider"/>*/}

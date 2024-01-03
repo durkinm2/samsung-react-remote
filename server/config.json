@@ -2,20 +2,29 @@
   "tvs": [
     {
       "id": "1",
+      "debug": true,
       "ipAddress": "192.168.1.101",
       "macAddress": "00:11:22:33:44:55",
+      "port": 8002,
+      "token": "12345678",
       "isOn": true
     },
     {
       "id": "2",
+      "debug": true,
       "ipAddress": "192.168.1.102",
       "macAddress": "00:11:22:33:44:56",
+      "port": 8002,
+      "token": "12345678",
       "isOn": true
     },
     {
       "id": "3",
+      "debug": true,
       "ipAddress": "192.168.1.103",
       "macAddress": "00:11:22:33:44:57",
+      "port": 8002,
+      "token": "12345678",
       "isOn": true
     }
   ]
