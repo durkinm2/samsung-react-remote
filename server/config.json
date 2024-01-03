@@ -4,19 +4,19 @@
       "id": "1",
       "ipAddress": "192.168.1.101",
       "macAddress": "00:11:22:33:44:55",
-      "isOn": false
+      "isOn": true
     },
     {
       "id": "2",
       "ipAddress": "192.168.1.102",
       "macAddress": "00:11:22:33:44:56",
-      "isOn": false
+      "isOn": true
     },
     {
       "id": "3",
       "ipAddress": "192.168.1.103",
       "macAddress": "00:11:22:33:44:57",
-      "isOn": false
+      "isOn": true
     }
   ]
 }
