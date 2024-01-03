@@ -13,7 +13,6 @@ const port = process.env.REACT_APP_DB_PORT;
 app.use(cors());
 app.use(bodyParser.json());
 
-
 const config = {
     debug: true, // Default: false
     ip: process.env.REACT_APP_TV_L_IP,

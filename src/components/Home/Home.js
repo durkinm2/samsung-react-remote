@@ -85,34 +85,6 @@ const Home = () => {
                             </button>
                         </div>
                     ))}
-                    {/*<div className="btn-group btn-row">*/}
-                    {/*    <Button className="btn btn-tv-main">*/}
-                    {/*        <LuMonitorSmartphone className="btn-tv-icon"/>*/}
-                    {/*        <span className="btn-tv-text">TV 1</span>*/}
-                    {/*        </Button>*/}
-                    {/*    <button className="btn btn-power-main">*/}
-                    {/*        <FiPower className="custom-icon-row1"/>*/}
-                    {/*    </button>*/}
-                    {/*</div>*/}
-                    {/*<div className="btn-group btn-row">*/}
-                    {/*    <button className="btn btn-tv-main">*/}
-                    {/*        <LuMonitorSmartphone className="btn-tv-icon"/>*/}
-                    {/*        <span className="btn-tv-text">TV 2</span>*/}
-                    {/*    </button>*/}
-                    {/*    <button className="btn btn-power-main">*/}
-                    {/*        <FiPower className="custom-icon-row1"/>*/}
-                    {/*    </button>*/}
-                    {/*</div>*/}
-                    {/*<div className="btn-group btn-row">*/}
-                    {/*    <button className="btn btn-tv-main">*/}
-                    {/*        <LuMonitorSmartphone className="btn-tv-icon"/>*/}
-                    {/*        <span className="btn-tv-text">TV 3</span>*/}
-                    {/*    </button>*/}
-                    {/*    <button className="btn btn-power-main">*/}
-                    {/*        <FiPower className="custom-icon-row1"/>*/}
-                    {/*    </button>*/}
-                    {/*</div>*/}
-
                 </div>
 
             </div>

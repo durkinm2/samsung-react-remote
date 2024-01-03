@@ -5,22 +5,15 @@ import {
     FiChevronLeft,
     FiChevronRight,
     FiChevronUp,
-    FiCrosshair,
-    FiPower,
-    FiSettings
+    FiPower
 } from "react-icons/fi";
 import './Tv.css';
 import {BsFillVolumeMuteFill} from "react-icons/bs";
 import {AiFillHome} from "react-icons/ai";
 import {MdInput} from "react-icons/md";
-// import { useSamsungAPI } from '../../contexts/SamsungAPIContext';
-// import {KEYS} from "samsung-tv-control";
 
 const TV = () => {
     const { tvId } = useParams();
-
-    // const { getApiInstance } = useSamsungAPI();
-    // const samsungApi = getApiInstance(tvId);
 
     const sendCommand = async (k) => {
         try {
@@ -35,24 +28,6 @@ const TV = () => {
             console.error('Error updating TV configuration:', error);
         }
         console.log(`Sending command "${k}" to TV${tvId}`);
-    };
-
-    const handleButtonClick = async () => {
-        try {
-            // const updatedTVs = tvs.map((tv) =>
-            //     tv.id === tvId ? { ...tv, isOn: !tv.isOn } : tv
-            // );
-            let tvId = 1;
-            const response = await fetch(`${process.env.REACT_APP_HOST}:${process.env.REACT_APP_DB_PORT}/tvs/${tvId}/mute`);
-
-            if (!response.ok) {
-                throw new Error('Failed to update TV configuration');
-            }
-
-            // setTVs(updatedTVs);
-        } catch (error) {
-            console.error('Error updating TV configuration:', error);
-        }
     };
 
     return (
@@ -103,7 +78,7 @@ const TV = () => {
                 <div className="col-md-4 custom-row-3">
                     <div className="card">
                         <div className="card-body">
-                            <button className="btn btn-outline-light float-start" onClick={handleButtonClick}>
+                            <button className="btn btn-outline-light float-start" onClick={() => sendCommand('KEY_MUTE')}>
                                 <BsFillVolumeMuteFill size={28} className=""/>
                             </button>
                             {/*<div className="btn-divider"/>*/}
