@@ -3,13 +3,26 @@ const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
 const bodyParser = require('body-parser');
+const { Samsung, KEYS, APPS } = require('samsung-tv-control')
+require('dotenv').config()
 
 const app = express();
-const port = 8001;
+const port = process.env.REACT_APP_DB_PORT;
 
 // Enable CORS for all routes
 app.use(cors());
 app.use(bodyParser.json());
+
+
+const config = {
+    debug: true, // Default: false
+    ip: process.env.REACT_APP_TV_L_IP,
+    mac: process.env.REACT_APP_TV_L_MAC,
+    nameApp: 'NodeJS-Test', // Default: NodeJS
+    port: 8002, // Default: 8002
+    token: process.env.REACT_APP_TOKEN,
+}
+const samsung = new Samsung(config);
 
 app.get('/tvs', (req, res) => {
     const configPath = path.join(__dirname, 'config.json');
@@ -46,6 +59,50 @@ app.put('/tvs/:tvId', (req, res) => {
         console.error('Error updating TV configuration:', error);
         res.status(500).json({ success: false, message: 'Failed to update TV configuration' });
     }
+});
+
+app.get('/tvs/:tvId/mute', (req, res) => {
+   // console.info('# trying to getToken:')
+    //
+    // samsung
+    //     .isAvailable()
+    //     .then(() => {
+    //         // Get token for API
+    //         samsung.getToken((token) => {
+    //             console.info('# Response getToken:', token)
+    //         })
+    //
+    //
+    //     })
+    //     .catch(
+    //         (e) => console.error("failed to get token: " + e))
+
+
+    // Send key to TV
+    samsung.sendKey(KEYS["KEY_MUTE"], function (err, res) {
+        if (err) {
+            throw new Error(err);
+        } else {
+            console.log(res);
+        }
+    });
+
+    res.sendStatus(204);
+});
+
+app.get('/tvs/:tvId/cmd', (req, res) => {
+    console.log("Log message sent to the client from /screenId/cmd key=" + req.query.key);
+
+    // samsung.sendCommand(req.query.key);
+    samsung.sendKey(KEYS[req.query.key], function (err, res) {
+        if (err) {
+            throw new Error(err);
+        } else {
+            console.log(res);
+        }
+    });
+
+    res.sendStatus(204);
 });
 
 app.listen(port, () => {

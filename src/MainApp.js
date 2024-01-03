@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './components/Navbar/Navbar';
 import TV from './components/Tv/Tv';
 import Settings from './components/Settings/Settings';
-import { SamsungAPIProvider } from './contexts/SamsungAPIContext';
+// import { SamsungAPIProvider } from './contexts/SamsungAPIContext';
 function MainApp() {
 
     return (
