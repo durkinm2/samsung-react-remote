@@ -12,7 +12,7 @@
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
 }
-.card {
+.tv-container .card {
     background: #24282b !important;
 }
 .dpad-1{

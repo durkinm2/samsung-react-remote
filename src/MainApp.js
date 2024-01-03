@@ -18,8 +18,6 @@ function MainApp() {
                         </Routes>
                     </div>
             </main>
-
-
         </div>
     );
 }

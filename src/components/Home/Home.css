@@ -13,11 +13,24 @@
     flex-direction: column;
     justify-content: space-between;
 }
-.card-header {
+
+.home-container .card-header {
     color: #fff !important;
     text-align: start;
-    background: #49706c !important;
+    /*background: #33b1ff !important;*/
+    background-color: rgba(51, 170, 255, 0.8);
+    /*background-color: rgba(0, 157, 255, 0.9);*/
+
 }
+
+.home-container .card {
+    color: #fff !important;
+    text-align: start;
+    /*background: #91a3b0 !important;*/
+    background-color: rgba( 163, 189, 207, 0.1);
+    /*opacity: .8;*/
+}
+
 .home-container .btn-row {
     flex: 1;
     display: flex;
@@ -49,6 +62,18 @@
     font-size: 26px !important;
     cursor: pointer;
 }
+
+.btn-tv-icon {
+    float: left;
+    font-size: 1.3em;
+    /*margin-left: 20px;*/
+}
+.btn-tv-text {
+    text-align: center;
+    margin-right: 28px;
+}
+
+
 
 /* Media Query for Mobile Devices */
 @media (max-width: 767px) {

@@ -1,4 +1,3 @@
-// Navbar.js
 import React, {useState} from 'react';
 import {Link, useLocation} from 'react-router-dom';
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
@@ -6,8 +5,8 @@ import './Navbar.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import {FiHome, FiMenu, FiSettings, FiTv} from 'react-icons/fi';
+
 const NavBar = () => {
     const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
     const [collapsed, setCollapsed] = useState(false);
@@ -23,7 +22,7 @@ const NavBar = () => {
                 {/*<Navbar.Brand as={Link} to="/" className="custom-navbar-brand">SamsungTV</Navbar.Brand>*/}
                 <Nav className="custom-nav" style={{display:"flex", flexDirection:"row", justifyContent: 'space-between', alignItems: 'center', width: '100%'}} activeKey="1" onSelect={handleSelect}>
                     <Nav.Item>
-                        <Nav.Link as={Link} to="/" className={`text-light custom-nav-link  ${location.pathname === '/' ? 'active' : ''}`}>
+                        <Nav.Link as={Link} to="/" className={`text-light custom-nav-link ${location.pathname === '/' ? 'active' : ''}`}>
                             <FiHome size={28} className="custom-nav-icon"/>
                         </Nav.Link>
                     </Nav.Item>
