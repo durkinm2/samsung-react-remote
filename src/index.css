@@ -14,3 +14,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* styles.css or your custom utility classes */
+.dark {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  /* Add more dark mode styles here */
+}

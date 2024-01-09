@@ -1,12 +1,12 @@
 import React from 'react';
-import {FiPower} from "react-icons/fi";
+import {FiChevronDown, FiChevronUp, FiMinus, FiPlus, FiPower} from "react-icons/fi";
 import {MdInput} from "react-icons/md";
+import {BsFillVolumeMuteFill} from "react-icons/bs";
 
 const Remote = ({ onDirectionClick }) => {
     return (
-        <div className="flex justify-center items-center h-screen">
-
-            <div className="w-80 bg-gray-800 p-4 rounded-lg shadow-lg">
+        <div className="flex flex-col items-center justify-start h-screen">
+            <div className="w-80 bg-gray-800 p-4 rounded-lg shadow-lg mt-8 text-white">
                 {/* Power button */}
                 <div className="flex flex-col gap-4">
                     <div className="grid grid-cols-3 gap-4">
@@ -52,30 +52,28 @@ const Remote = ({ onDirectionClick }) => {
                             9
                         </button>
                     </div>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-3 gap-4">
+                        <button className="p-3 bg-gray-500 rounded-md flex items-center justify-center focus:outline-none">
+                            <FiPlus  className="w-6 h-6 flex-shrink-0" />
+                        </button>
                         <button className="p-3 bg-gray-700 rounded-md focus:outline-none">
                             0
                         </button>
-                        <button className="p-3 bg-gray-700 rounded-md focus:outline-none">
-                            Power
+                        <button className="p-3 bg-gray-500 rounded-md flex items-center justify-center focus:outline-none">
+                            <FiChevronUp className="w-6 h-6 flex-shrink-0" />
                         </button>
                     </div>
-                </div>
-                <div className="mt-4 flex justify-between">
-                    <button className="p-3 bg-gray-700 rounded-md focus:outline-none">
-                        Volume Up
-                    </button>
-                    <button className="p-3 bg-gray-700 rounded-md focus:outline-none">
-                        Channel Up
-                    </button>
-                </div>
-                <div className="mt-4 flex justify-between">
-                    <button className="p-3 bg-gray-700 rounded-md focus:outline-none">
-                        Volume Down
-                    </button>
-                    <button className="p-3 bg-gray-700 rounded-md focus:outline-none">
-                        Channel Down
-                    </button>
+                    <div className="grid grid-cols-3 gap-4">
+                        <button className="p-3 bg-gray-500 rounded-md flex items-center justify-center focus:outline-none">
+                            <FiMinus className="w-6 h-6 flex-shrink-0" />
+                        </button>
+                        <button className="p-3 bg-gray-500 rounded-md flex items-center justify-center focus:outline-none">
+                            <BsFillVolumeMuteFill className="w-6 h-6 flex-shrink-0" />
+                        </button>
+                        <button className="p-3 bg-gray-500 rounded-md flex items-center justify-center focus:outline-none">
+                            <FiChevronDown className="w-6 h-6 flex-shrink-0" />
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
