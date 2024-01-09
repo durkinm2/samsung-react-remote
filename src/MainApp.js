@@ -3,6 +3,8 @@ import Home from './components/Home/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './components/Navbar/Navbar';
 import TV from './components/Tv/Tv';
+import Remote from './components/Remote/Remote';
+
 import Settings from './components/Settings/Settings';
 // import { SamsungAPIProvider } from './contexts/SamsungAPIContext';
 function MainApp() {
@@ -15,7 +17,7 @@ function MainApp() {
                             <NavBar />
                             <Routes>
                                 <Route path="/" element={<Home />} />
-                                <Route path="/tv/:tvId" element={<TV />} />
+                                <Route path="/tv/:tvId" element={<Remote />} />
                                 <Route path="/settings" element={<Settings />} />
                             </Routes>
                         {/*</SamsungAPIProvider>*/}

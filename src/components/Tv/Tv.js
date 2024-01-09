@@ -29,7 +29,10 @@ const TV = () => {
         }
         console.log(`Sending command "${k}" to TV${tvId}`);
     };
-
+    const handleDirectionClick = direction => {
+        console.log(`Direction clicked: ${direction}`);
+        // Handle the direction click logic here
+    };
     return (
         <div className="container mt-5">
             <div className="tv-container d-grid gap-1">
