@@ -1,21 +1,45 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {FiChevronDown, FiChevronUp, FiHome, FiMinus, FiPlus, FiPower} from "react-icons/fi";
 import {MdInput} from "react-icons/md";
 import {BsFillVolumeMuteFill} from "react-icons/bs";
 import {TbNumbers} from "react-icons/tb";
 import './Remote.css';
 import DPad from "../DPad";
+import {IoIosArrowRoundBack} from "react-icons/io";
 const Remote = ({ onDirectionClick }) => {
-    const [showDigitButtons, setShowDigitButtons] = useState(true);
+    const [showDigitButtons, setShowDigitButtons] = useState(false);
+    const [marginTop, setMarginTop] = useState('0');
+    const [marginBottom, setMarginBottom] = useState('0');
+
+    const digitButtonsRef = useRef(null);
+
+    const handleTransitionEnd = () => {
+        if (!showDigitButtons) {
+            setMarginTop('0');
+            setMarginBottom('0');
+
+        }
+    };
 
     const toggleDigitButtons = () => {
         setShowDigitButtons((prev) => !prev);
+        setMarginTop('10px');
+        setMarginBottom('24px');
+
+    };
+    const digitButtonsStyle = {
+        maxHeight: showDigitButtons ? '1000px' : '0',
+        overflow: 'hidden',
+        transition: 'max-height 0.5s ease-in-out',
+        marginTop: marginTop,
+        marginBottom: marginBottom
     };
 
     return (
         <div className="flex flex-col items-center justify-start h-screen">
             <div className="w-80 bg-gray-800 p-4 rounded-lg shadow-lg mt-8 text-white">
-                {/* Power button */}
+
+                {/* ROW1 */}
                 <div className="flex flex-col gap-4">
                     <div className="grid grid-cols-3 gap-4">
                         <button className="p-3 bg-red-500 rounded-md shadow-lg flex items-center justify-center focus:outline-none">
@@ -25,23 +49,32 @@ const Remote = ({ onDirectionClick }) => {
                             className={`p-3 rounded-md shadow-lg text-white flex items-center justify-center focus:outline-none ${
                                 showDigitButtons ? 'bg-blue-500' : 'bg-gray-700'
                             }`}
-                            onClick={toggleDigitButtons}
-                        >
+                            onClick={toggleDigitButtons} >
                             <TbNumbers className="w-6 h-6 flex-shrink-0" />
                         </button>
-                        {/*<div className="col-span-1"></div>*/}
-                        <button className="p-3 bg-red-500 rounded-md shadow-lg flex items-center justify-center focus:outline-none">
+                        <button className="p-3 bg-slate-800 rounded-md shadow-lg flex items-center justify-center focus:outline-none">
                             <MdInput className="w-6 h-6 flex-shrink-0" />
                         </button>
                     </div>
+                </div>
 
-                    {/*{showDigitButtons && (*/}
-                    <div
-                        className={`digit-buttons ${
-                        showDigitButtons ? 'digit-buttons-visible' : 'digit-buttons-hidden'
-                    } `}>
+                {/* ROW2 */}
+                <div className="flex flex-col gap-4">
+                    <div className="grid grid-cols-3 gap-4 mb-2 mt-4">
+                        <button className="p-1 bg-slate-800 rounded-md shadow-lg flex items-center justify-center focus:outline-none">
+                            <IoIosArrowRoundBack className="w-9 h-9 flex-shrink-0"/>
+                        </button>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-4">
 
-                        <div className="grid grid-cols-3 gap-4 mt-4">
+                {/* ROW3 */}
+                    <div style={digitButtonsStyle} className="digit-buttons"
+                         ref={digitButtonsRef}
+                         onTransitionEnd={handleTransitionEnd}
+                    >
+
+                        <div className="grid grid-cols-3 gap-4">
                             <button className="p-3 bg-gray-700 rounded-md shadow-lg focus:outline-none">
                                 1
                             </button>
@@ -77,21 +110,28 @@ const Remote = ({ onDirectionClick }) => {
                             </button>
                         </div>
                     </div>
+                </div>
+                <div className="flex flex-col gap-4">
 
-                    <DPad></DPad>
+                {/* ROW4 */}
+                <DPad></DPad>
 
-                    {/*)}*/}
+                {/* ROW5 */}
+
                     <div className="grid grid-cols-3 gap-4">
                         <button className="p-3 bg-gray-500 rounded-md flex items-center justify-center focus:outline-none">
                             <FiPlus  className="w-6 h-6 flex-shrink-0" />
                         </button>
-                        <button className="p-3 bg-gray-700 rounded-md flex items-center justify-center focus:outline-none">
+                        <button className="p-3 bg-slate-800 rounded-md flex items-center justify-center focus:outline-none">
                             <FiHome  className="w-6 h-6 flex-shrink-0" />
                         </button>
                         <button className="p-3 bg-gray-500 rounded-md flex items-center justify-center focus:outline-none">
                             <FiChevronUp className="w-6 h-6 flex-shrink-0" />
                         </button>
                     </div>
+
+                {/* ROW6 */}
+
                     <div className="grid grid-cols-3 gap-4">
                         <button className="p-3 bg-gray-500 rounded-md flex items-center justify-center focus:outline-none">
                             <FiMinus className="w-6 h-6 flex-shrink-0" />
@@ -104,10 +144,7 @@ const Remote = ({ onDirectionClick }) => {
                         </button>
                     </div>
                 </div>
-                {/* D-pad */}
             </div>
-
-
         </div>
     );
 };
