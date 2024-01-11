@@ -68,8 +68,12 @@ const Home = () => {
     };
 
     return  (
-        <div className="container mx-auto home-container">
-            <div className="card">
+        <div>
+
+            <div className="container mx-auto home-container">
+                <h2 className="home-header text-white text-left mt-6 ml-2">Home</h2>
+
+                <div className="card">
                 <div className="card-header ">
                     <div className="flex justify-between mt-1">
                     <h5>Screens</h5>
@@ -84,17 +88,17 @@ const Home = () => {
                                 <div className="flex">
                                     <button
                                         className={`flex flex-1 bg-gray-700 p-3 rounded-l-md text-white items-center justify-center focus:outline-none 
-                                        ${  tv.isOn ? 'bg-gradient-to-tr from-cyan-500/90 from-0% via-sky-600/95 via-80% to-blue-500/80 to-100%' : 'bg-gray-700 disabled'
+                                        ${  tv.isOn ? 'bg-gradient-to-r from-sky-500 from-100% to-blue-500/80' : 'bg-gray-700 disabled'
                                         }`}
                                         style={{ width: '75%' }}
                                         disabled={!tv.isOn}
                                         onClick={() => navigate(`/tv/${tv.id}`)}
                                     >
                                         <div className="flex items-center justify-center mr-4 flex-shrink-0 w-40">
-                                            <LuMonitorSmartphone className="w-6 h-6 flex-shrink-0" />
-                                            <span className="text-center w-28 flex-shrink-0">{`TV ${tv.id} `}</span>
+                                            <LuMonitorSmartphone className="w-10 h-6 flex-shrink-0" />
+                                            <span className="text-center w-32 flex-shrink-0">{`TV ${tv.id} `}</span>
                                             <span
-                                                  className={`w-8 ${  tv.isOn ? 'text-cyan-300' : 'text-gray-500'} flex-shrink-0  text-center text-sm`}>{`${  tv.isOn ? 'ON' : 'OFF'}`}
+                                                  className={`w-7 ${  tv.isOn ? 'text-cyan-300' : 'text-gray-500'} flex-shrink-0  text-center text-sm`}>{`${  tv.isOn ? 'ON' : 'OFF'}`}
                                             </span>
                                         </div>
                                     </button>
@@ -126,6 +130,7 @@ const Home = () => {
                         ))}
                 </div>
             </div>
+        </div>
         </div>
     );
 }

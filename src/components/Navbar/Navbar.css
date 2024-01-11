@@ -1,32 +1,50 @@
 .nav-container {
   background: linear-gradient(to bottom, #1f2933 100%, #4a5568 70%);
 }
-.custom-navbar-brand {
-  font-weight: bold;
-  font-size: 1.0em !important;
-  color: #fff !important;
-}
 
 .custom-nav-link.active {
   color: #007bff !important;
-  font-weight: bold;
-  text-decoration: underline #007bff;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 7px;
+  /*font-weight: 600;*/
+  /*text-decoration: underline #007bff;*/
+  /*transition: text-decoration 0.3s ease-in-out; !* Adjust the duration and easing as needed *!*/
+  /*text-decoration-thickness: 1.4px;*/
+  /*text-underline-offset: 7px;*/
+}
+
+.custom-nav-link::before {
+  content: '';
+  position: absolute; /* Position the pseudo-element relative to the parent */
+  bottom: 5px; /* Align the pseudo-element to the bottom of the parent */
+  height: 1px;
+  width: 0; /* Initial width set to 0 */
+  background-color: #007bff; /* Underline color */
+  left: 0; /* Align the pseudo-element to the left of the parent */
+  transition: width 0.3s ease-in-out; /* Transition the width property */
+}
+/* Apply the active styles and transition for .custom-nav-link.active::before */
+.custom-nav-link.active::before {
+  width: 100%; /* Set width to 100% when active */
 }
 
 .custom-nav-link {
+  /*font-family: 'Inter', sans-serif;*/
+  font-weight: 400 !important;
+  position: relative; /* Make the parent container relative */
   font-size: 1.3em !important;
-  color: #fff !important;
+  color: #cffafe !important;
   text-decoration: none;
   text-align: center;
   margin-left: 16px !important;
   margin-right: 16px !important;
+  /*transition: text-decoration 0.3s ease-in-out; !* Adjust the duration and easing as needed *!*/
 }
+
 .custom-nav {
   width: 100% !important;
 }
-
+.custom-nav-icon{
+  /*color: #dbeafe !important;*/
+}
 @media (max-width: 767px) {
   .custom-nav {
     margin-top: 2%;

@@ -16,33 +16,33 @@ const NavBar = () => {
     return (
         <div>
             {/* Navbar */}
-        <Navbar expand="lg" className="nav-container text-light">
+        <Navbar expand="lg" className="nav-container ">
             <Container>
                 {/*<Navbar.Brand as={Link} to="/" className="custom-navbar-brand">SamsungTV</Navbar.Brand>*/}
                 <Nav className="custom-nav" style={{display:"flex", flexDirection:"row", justifyContent: 'space-between', alignItems: 'center', width: '100%'}} activeKey="1" onSelect={handleSelect}>
                     <Nav.Item>
-                        <Nav.Link as={Link} to="/" className={`text-light custom-nav-link ${location.pathname === '/' ? 'active' : ''}`}>
+                        <Nav.Link as={Link} to="/" className={` custom-nav-link ${location.pathname === '/' ? 'active' : 'text-blue-100'}`}>
                             <FiHome size={28} className="custom-nav-icon"/>
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link as={Link} to="/tv/1" className={`text-light custom-nav-link ${location.pathname === '/tv/1' ? 'active' : ''}`}>
+                        <Nav.Link as={Link} to="/tv/1" className={` custom-nav-link ${location.pathname === '/tv/1' ? 'active' : ''}`}>
                             TV 1
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link as={Link} to="/tv/2" className={`text-light custom-nav-link ${location.pathname === '/tv/2' ? 'active' : ''}`}>
+                        <Nav.Link as={Link} to="/tv/2" className={` custom-nav-link ${location.pathname === '/tv/2' ? 'active' : ''}`}>
                             TV 2
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link as={Link} to="/tv/3" className={`text-light custom-nav-link ${location.pathname === '/tv/3' ? 'active' : ''}`}>
+                        <Nav.Link as={Link} to="/tv/3" className={` custom-nav-link ${location.pathname === '/tv/3' ? 'active' : ''}`}>
                             TV 3
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link as={Link} to="/settings" className={`text-light custom-nav-link ${location.pathname === '/settings' ? 'active' : ''}`}>
-                            <FiSettings size={28} className="custom-nav-icon" />
+                        <Nav.Link as={Link} to="/settings" className={` custom-nav-link ${location.pathname === '/settings' ? 'active' : ''}`}>
+                            <FiSettings size={26} className="custom-nav-icon" />
                         </Nav.Link>
                     </Nav.Item>
 

@@ -3,11 +3,13 @@
     margin: 0 auto;
     text-align: center;
 }
+.home-header {
 
+}
 .home-container{
     width: 96% !important;
-    margin-top: 90px !important;
-    margin-bottom: 100px;
+    /*margin-top: 90px !important;*/
+    /*margin-bottom: 100px;*/
     flex: 1; /* Let the container fill the remaining vertical space */
     display: flex;
     flex-direction: column;
@@ -24,6 +26,8 @@
 }
 
 .home-container .card {
+    margin-top: 52px !important;
+    margin-bottom: 100px;
     color: #fff !important;
     text-align: start;
     /*background: #91a3b0 !important;*/
