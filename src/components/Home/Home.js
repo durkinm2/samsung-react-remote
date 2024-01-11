@@ -90,14 +90,18 @@ const Home = () => {
                                         disabled={!tv.isOn}
                                         onClick={() => navigate(`/tv/${tv.id}`)}
                                     >
-                                        <div className="flex items-center justify-center mr-4">
+                                        <div className="flex items-center justify-center mr-4 flex-shrink-0 w-40">
                                             <LuMonitorSmartphone className="w-6 h-6 flex-shrink-0" />
-                                            <span className="text-center ml-8">{`TV ${tv.id}`}</span>
+                                            <span className="text-center w-28 flex-shrink-0">{`TV ${tv.id} `}</span>
+                                            <span
+                                                  className={`w-8 ${  tv.isOn ? 'text-cyan-300' : 'text-gray-500'} flex-shrink-0  text-center text-sm`}>{`${  tv.isOn ? 'ON' : 'OFF'}`}
+                                            </span>
                                         </div>
                                     </button>
                                     <button
                                         className="flex-none w-40 bg-red-500 p-3 rounded-r-md text-white flex items-center justify-center focus:outline-none"
                                         style={{ width: '25%' }}
+                                        onClick={() => handlePowerToggle(tv.id)}
                                     >
                                         <FiPower />
                                     </button>
