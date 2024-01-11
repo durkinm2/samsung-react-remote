@@ -25,7 +25,6 @@ const Remote = ({ onDirectionClick }) => {
         setShowDigitButtons((prev) => !prev);
         setMarginTop('10px');
         setMarginBottom('24px');
-
     };
     const digitButtonsStyle = {
         maxHeight: showDigitButtons ? '1000px' : '0',
@@ -45,14 +44,9 @@ const Remote = ({ onDirectionClick }) => {
                         <button className="p-3 bg-red-500 rounded-md shadow-lg flex items-center justify-center focus:outline-none">
                             <FiPower className="w-6 h-6 flex-shrink-0" />
                         </button>
-                        <button
-                            className={`p-3 rounded-md shadow-lg text-white flex items-center justify-center focus:outline-none ${
-                                showDigitButtons ? 'bg-blue-500' : 'bg-gray-700'
-                            }`}
-                            onClick={toggleDigitButtons} >
-                            <TbNumbers className="w-6 h-6 flex-shrink-0" />
-                        </button>
-                        <button className="p-3 bg-slate-800 rounded-md shadow-lg flex items-center justify-center focus:outline-none">
+                        <div className="col-span-1"></div>
+
+                        <button className="input-button p-3 bg-gradient-to-r from-blue-600/75 to-violet-600/80 rounded-md shadow-lg flex items-center justify-center focus:outline-none">
                             <MdInput className="w-6 h-6 flex-shrink-0" />
                         </button>
                     </div>
@@ -63,6 +57,15 @@ const Remote = ({ onDirectionClick }) => {
                     <div className="grid grid-cols-3 gap-4 mb-2 mt-4">
                         <button className="p-1 bg-slate-800 rounded-md shadow-lg flex items-center justify-center focus:outline-none">
                             <IoIosArrowRoundBack className="w-9 h-9 flex-shrink-0"/>
+                        </button>
+                        <div className="col-span-1"></div>
+
+                        <button
+                            className={`toggle-button p-1 rounded-md shadow-lg text-white flex items-center justify-center focus:outline-none ${
+                                showDigitButtons ? 'active' : 'bg-gray-700'
+                            }`}
+                            onClick={toggleDigitButtons} >
+                            <TbNumbers className="w-6 h-6 flex-shrink-0" />
                         </button>
                     </div>
                 </div>
@@ -119,13 +122,13 @@ const Remote = ({ onDirectionClick }) => {
                 {/* ROW5 */}
 
                     <div className="grid grid-cols-3 gap-4">
-                        <button className="p-3 bg-gray-500 rounded-md flex items-center justify-center focus:outline-none">
+                        <button className="p-3 bg-gray-700 rounded-md flex items-center justify-center focus:outline-none">
                             <FiPlus  className="w-6 h-6 flex-shrink-0" />
                         </button>
-                        <button className="p-3 bg-slate-800 rounded-md flex items-center justify-center focus:outline-none">
+                        <button className="p-3 bg-slate-800 home-button rounded-md flex items-center justify-center focus:outline-none">
                             <FiHome  className="w-6 h-6 flex-shrink-0" />
                         </button>
-                        <button className="p-3 bg-gray-500 rounded-md flex items-center justify-center focus:outline-none">
+                        <button className="p-3 bg-gray-700 rounded-md flex items-center justify-center focus:outline-none">
                             <FiChevronUp className="w-6 h-6 flex-shrink-0" />
                         </button>
                     </div>
@@ -133,13 +136,13 @@ const Remote = ({ onDirectionClick }) => {
                 {/* ROW6 */}
 
                     <div className="grid grid-cols-3 gap-4">
-                        <button className="p-3 bg-gray-500 rounded-md flex items-center justify-center focus:outline-none">
+                        <button className="p-3 bg-gray-700 rounded-md flex items-center justify-center focus:outline-none">
                             <FiMinus className="w-6 h-6 flex-shrink-0" />
                         </button>
                         <button className="p-3 bg-gray-700 rounded-md flex items-center justify-center focus:outline-none">
                             <BsFillVolumeMuteFill className="w-6 h-6 flex-shrink-0" />
                         </button>
-                        <button className="p-3 bg-gray-500 rounded-md flex items-center justify-center focus:outline-none">
+                        <button className="p-3 bg-gray-700 rounded-md flex items-center justify-center focus:outline-none">
                             <FiChevronDown className="w-6 h-6 flex-shrink-0" />
                         </button>
                     </div>

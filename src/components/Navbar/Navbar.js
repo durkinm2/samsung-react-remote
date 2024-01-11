@@ -16,7 +16,7 @@ const NavBar = () => {
     return (
         <div>
             {/* Navbar */}
-        <Navbar expand="lg" className="bg-dark text-light">
+        <Navbar expand="lg" className="nav-container text-light">
             <Container>
                 {/*<Navbar.Brand as={Link} to="/" className="custom-navbar-brand">SamsungTV</Navbar.Brand>*/}
                 <Nav className="custom-nav" style={{display:"flex", flexDirection:"row", justifyContent: 'space-between', alignItems: 'center', width: '100%'}} activeKey="1" onSelect={handleSelect}>

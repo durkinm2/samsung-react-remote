@@ -70,8 +70,12 @@ const Home = () => {
     return  (
         <div className="container mx-auto home-container">
             <div className="card">
-                <div className="card-header">
+                <div className="card-header ">
+                    <div className="flex justify-between mt-1">
                     <h5>Screens</h5>
+                    <h7 className=""><b>{tvs.length} </b> Devices</h7>
+                    </div>
+
                 </div>
                 <div className="card-body grid gap-4">
                     {tvs &&
@@ -80,7 +84,7 @@ const Home = () => {
                                 <div className="flex">
                                     <button
                                         className={`flex flex-1 bg-gray-700 p-3 rounded-l-md text-white items-center justify-center focus:outline-none 
-                                        ${  tv.isOn ? 'bg-blue-500' : 'bg-gray-700 disabled'
+                                        ${  tv.isOn ? 'bg-gradient-to-tr from-cyan-500/90 from-0% via-sky-600/95 via-80% to-blue-500/80 to-100%' : 'bg-gray-700 disabled'
                                         }`}
                                         style={{ width: '75%' }}
                                         disabled={!tv.isOn}
