@@ -86,9 +86,10 @@ const Home = () => {
                         tvs.map((tv) => (
                             <div className="flex flex-col gap-4" key={tv.id}>
                                 <div className="flex">
+                                    {/*bg-gradient-to-r from-sky-500 from-100% to-blue-500/80*/}
                                     <button
                                         className={`flex flex-1 bg-gray-700 p-3 rounded-l-md text-white items-center justify-center focus:outline-none 
-                                        ${  tv.isOn ? 'bg-gradient-to-r from-sky-500 from-100% to-blue-500/80' : 'bg-gray-700 disabled'
+                                        ${  tv.isOn ? 'bg-sky-400' : 'bg-gray-700 disabled'
                                         }`}
                                         style={{ width: '75%' }}
                                         disabled={!tv.isOn}
@@ -103,11 +104,11 @@ const Home = () => {
                                         </div>
                                     </button>
                                     <button
-                                        className="flex-none w-40 bg-red-500 p-3 rounded-r-md text-white flex items-center justify-center focus:outline-none"
+                                        className={`flex-none w-40 bg-red-500 p-3 rounded-r-md text-white flex items-center justify-center focus:outline-none`}
                                         style={{ width: '25%' }}
                                         onClick={() => handlePowerToggle(tv.id)}
                                     >
-                                        <FiPower />
+                                        <FiPower className={`${  tv.isOn ? 'text-gray-200/95' : 'text-light'}`}/>
                                     </button>
                                 </div>
                             </div>

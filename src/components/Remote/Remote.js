@@ -17,7 +17,6 @@ const Remote = ({ onDirectionClick }) => {
         if (!showDigitButtons) {
             setMarginTop('0');
             setMarginBottom('0');
-
         }
     };
 
@@ -26,13 +25,15 @@ const Remote = ({ onDirectionClick }) => {
         setMarginTop('10px');
         setMarginBottom('24px');
     };
+
     const digitButtonsStyle = {
-        maxHeight: showDigitButtons ? '1000px' : '0',
+        maxHeight: showDigitButtons ? `700px` : '0',
         overflow: 'hidden',
-        transition: 'max-height 0.5s ease-in-out',
+        transition: 'max-height 0.3s ease-in-out',
         marginTop: marginTop,
-        marginBottom: marginBottom
+        marginBottom: marginBottom,
     };
+
 
     return (
         <div className="flex flex-col items-center justify-start h-screen">

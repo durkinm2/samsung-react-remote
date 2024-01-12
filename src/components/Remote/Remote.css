@@ -1,12 +1,12 @@
 .digit-buttons {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
+    /*transition: max-height 0.5s ease-in-out;*/
 
 }
 
 .digit-buttons-visible {
-    max-height: 1000px; /* Adjust the maximum height as needed */
+    /*max-height: 900px; !* Adjust the maximum height as needed *!*/
 }
 
 .digit-buttons-hidden {
