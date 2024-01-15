@@ -31,16 +31,16 @@ const DPad = () => {
                 ↑
                 </button>
                 <div className="col-span-1"></div>
-                <button className="p-3 text-xl bg-gray-700 rounded-full shadow-lg focus:outline-none"
+                <button className="p-3 mr-2 text-xl bg-gray-700 rounded-full shadow-lg focus:outline-none"
                         onClick={() => sendCommand('KEY_LEFT')}>
                 ←
                 </button>
                 {/*<div className="col-span-1"></div>*/}
-                <button className="flex items-center justify-center p-3 bg-gray-700 rounded-full shadow-lg focus:outline-none ml-2 mr-2"
+                <button className="flex items-center justify-center p-3 size-18 bg-slate-800 rounded-full shadow-lg focus:outline-none ml-1 mr-2"
                         onClick={() => sendCommand('KEY_ENTER')}>
-                    <FaRegCircle size="32" />
+                    OK
                 </button>
-                <button className="p-3 text-xl bg-gray-700 rounded-full shadow-lg focus:outline-none"
+                <button className="p-3 ml-2 text-xl bg-gray-700 rounded-full shadow-lg focus:outline-none"
                         onClick={() => sendCommand('KEY_RIGHT')}>
                 →
                 </button>
