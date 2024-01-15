@@ -6,7 +6,7 @@ Uses the ![samsung-tv-control](https://github.com/Toxblh/samsung-tv-control/tree
 ## Features
 -   Convenient TV Remote layout with a toggle view for number keys
 -   Home page for powering ON/OFF registered TVs
--   Settings page for registering & managing up to 5 TVs
+-   Settings page for registering & managing up to 3 TVs
 -   Responive layout
 -   Dark mode
 

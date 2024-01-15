@@ -60,35 +60,6 @@ app.put('/tvs/:tvId', (req, res) => {
     }
 });
 
-app.get('/tvs/:tvId/mute', (req, res) => {
-   // console.info('# trying to getToken:')
-    //
-    // samsung
-    //     .isAvailable()
-    //     .then(() => {
-    //         // Get token for API
-    //         samsung.getToken((token) => {
-    //             console.info('# Response getToken:', token)
-    //         })
-    //
-    //
-    //     })
-    //     .catch(
-    //         (e) => console.error("failed to get token: " + e))
-
-
-    // Send key to TV
-    samsung.sendKey(KEYS["KEY_MUTE"], function (err, res) {
-        if (err) {
-            throw new Error(err);
-        } else {
-            console.log(res);
-        }
-    });
-
-    res.sendStatus(204);
-});
-
 app.get('/tvs/:tvId/cmd', (req, res) => {
     console.log("Log message sent to the client from /screenId/cmd key=" + req.query.key);
 

@@ -1,6 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react';
 import './Home.css';
-import '../Tv/Tv.css'
 import {FiPower} from "react-icons/fi";
 import {LuMonitorSmartphone} from "react-icons/lu";
 import Button from "react-bootstrap/Button";
@@ -112,22 +111,6 @@ const Home = () => {
                                     </button>
                                 </div>
                             </div>
-                            // <div className="btn-group btn-row" key={tv.id}>
-                            //     <button
-                            //         className={`btn btn-tv-main ${!tv.isOn && 'disabled'}`}
-                            //         disabled={!tv.isOn}
-                            //         onClick={() => navigate(`/tv/${tv.id}`)}
-                            //     >
-                            //         <LuMonitorSmartphone className="btn-tv-icon" />
-                            //         <span className="btn-tv-text">{`TV ${tv.id}`}</span>
-                            //     </button>
-                            //     <button
-                            //         className="btn btn-power-main"
-                            //         onClick={() => handlePowerToggle(tv.id)}
-                            //     >
-                            //         <FiPower className="custom-icon-row1" />
-                            //     </button>
-                            // </div>
                         ))}
                 </div>
             </div>
