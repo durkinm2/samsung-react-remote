@@ -7,7 +7,7 @@
       "macAddress": "00:11:22:33:44:55",
       "port": 8002,
       "token": "12345678",
-      "isOn": false
+      "isOn": true
     },
     {
       "id": "2",
@@ -25,7 +25,7 @@
       "macAddress": "00:11:22:33:44:57",
       "port": 8002,
       "token": "12345678",
-      "isOn": false
+      "isOn": true
     }
   ]
 }

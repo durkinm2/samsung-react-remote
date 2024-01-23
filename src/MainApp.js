@@ -20,7 +20,6 @@ function MainApp() {
                                 <Route path="/settings" element={<Settings />} />
                             </Routes>
                         {/*</SamsungAPIProvider>*/}
-
                     </div>
             </main>
         </div>

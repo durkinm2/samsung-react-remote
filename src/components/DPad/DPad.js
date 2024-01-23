@@ -26,26 +26,26 @@ const DPad = () => {
             {/* D-pad */}
             <div className="flex items-center justify-center grid grid-cols-3 dpad-container">
                 <div className="col-span-1"></div>
-                <button className="p-3 text-xl bg-gray-700 rounded-full shadow-lg focus:outline-none mb-3"
+                <button className="p-3 text-xl bg-gray-700 rounded-full shadow-lg focus:outline-none mb-3 transform active:scale-90 transition-transform"
                         onClick={() => sendCommand('KEY_UP')}>
                 ↑
                 </button>
                 <div className="col-span-1"></div>
-                <button className="p-3 mr-2 text-xl bg-gray-700 rounded-full shadow-lg focus:outline-none"
+                <button className="p-3 mr-2 text-xl bg-gray-700 rounded-full shadow-lg focus:outline-none transform active:scale-90 transition-transform"
                         onClick={() => sendCommand('KEY_LEFT')}>
                 ←
                 </button>
                 {/*<div className="col-span-1"></div>*/}
-                <button className="flex items-center justify-center p-3 size-18 bg-slate-800 rounded-full shadow-lg focus:outline-none ml-1 mr-2"
+                <button className="flex items-center justify-center p-3 size-18 bg-slate-800 rounded-full shadow-lg focus:outline-none ml-1 mr-2 transform active:scale-90 transition-transform"
                         onClick={() => sendCommand('KEY_ENTER')}>
                     OK
                 </button>
-                <button className="p-3 ml-2 text-xl bg-gray-700 rounded-full shadow-lg focus:outline-none"
+                <button className="p-3 ml-2 text-xl bg-gray-700 rounded-full shadow-lg focus:outline-none transform active:scale-90 transition-transform"
                         onClick={() => sendCommand('KEY_RIGHT')}>
                 →
                 </button>
                 <div className="col-span-1"></div>
-                <button className="p-3 text-xl bg-gray-700 rounded-full shadow-lg focus:outline-none mt-3"
+                <button className="p-3 text-xl bg-gray-700 rounded-full shadow-lg focus:outline-none mt-3 transform active:scale-90 transition-transform"
                         onClick={() => sendCommand('KEY_DOWN')}>
                 ↓
                 </button>
