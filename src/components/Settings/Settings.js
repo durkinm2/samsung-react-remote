@@ -1,11 +1,5 @@
 import React, { useState } from 'react';
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-import Button from 'react-bootstrap/Button';
-
 import './Settings.css';
-import {InputGroup} from "react-bootstrap";
 
 const Settings = () => {
     const [selectedOption, setSelectedOption] = useState('Option 1');
@@ -36,29 +30,26 @@ const Settings = () => {
                         <label className="block text-md font-medium mr-4  w-24 whitespace-pre-line">Select TV</label>
                         <select
                             className="mt-1 h-8 p-2 block w-full border text-gray-500 rounded-md shadow-sm focus:outline-none focus:border-blue-500"
-                            // Add your combobox options and logic here
                         >
                             {/* Options go here */}
                         </select>
                     </div>
 
-                    {/* Text Entry 1 */}
+                    {/* IP 1 */}
                     <div className="mb-6 flex items-center">
                         <label className="block text-md font-medium mr-4 w-24">IP</label>
                         <input
                             type="text"
                             className="mt-1 p-2 block w-full border rounded-md shadow-sm focus:outline-none focus:border-blue-500"
-                            // Add your input logic here
                         />
                     </div>
 
-                    {/* Text Entry 2 */}
+                    {/* MAC 2 */}
                     <div className="mb-8 flex items-center">
                         <label className="block text-md font-medium mr-4 w-24">MAC</label>
                         <input
                             type="text"
                             className="mt-1 p-2 block w-full border rounded-md shadow-sm focus:outline-none focus:border-blue-500"
-                            // Add your input logic here
                         />
                     </div>
 
@@ -67,7 +58,6 @@ const Settings = () => {
 
                     <button
                         className="ml-20 mt-2 text-lg w-36 bg-blue-500 text-white py-2.5 rounded-md hover:bg-blue-600 focus:outline-none focus:border-blue-700"
-                        // Add your save button logic here
                     >
                         Save
                     </button>
