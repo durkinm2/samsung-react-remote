@@ -12,14 +12,12 @@ function MainApp() {
         <div className="MainApp">
             <main className="main">
                     <div>
-                        {/*<SamsungAPIProvider>*/}
                             <NavBar />
                             <Routes>
                                 <Route path="/" element={<Home />} />
                                 <Route path="/tv/:tvId" element={<Remote />} />
                                 <Route path="/settings" element={<Settings />} />
                             </Routes>
-                        {/*</SamsungAPIProvider>*/}
                     </div>
             </main>
         </div>
